@@ -116,7 +116,7 @@ function generatePassword() {
 
   if (passwordLength < 8 || passwordLength > 128) {
     alert("Please enter a value between 8 and 128.");
-    return;
+    return "Try again! Please enter a value between 8 and 128.";
   }
 
   if (lowercase) {
