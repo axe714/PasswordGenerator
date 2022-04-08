@@ -119,11 +119,6 @@ function generatePassword() {
     return "Try again! Please enter a value between 8 and 128.";
   }
 
-  if (userSelection.length < 1) {
-    alert("You must select atleast one character type and a value between 8 and 128.")
-    return "Try again! Please enter atleast one character type and a value between 8 and 128."
-  }
-
   if (lowercase) {
     userSelection = userSelection.concat(generatePasswordLower);
   }
