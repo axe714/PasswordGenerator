@@ -28,32 +28,32 @@ var generatePasswordLower = [
 ];
 
 var generatePasswordCapital = [
-"Q",
-"W",
-"E",
-"R",
-"T",
-"Y",
-"U",
-"I",
-"O",
-"P",
-"A",
-"S",
-"D",
-"F",
-"G",
-"H",
-"J",
-"K",
-"L",
-"Z",
-"X",
-"C",
-"V",
-"B",
-"N",
-"M",
+  "Q",
+  "W",
+  "E",
+  "R",
+  "T",
+  "Y",
+  "U",
+  "I",
+  "O",
+  "P",
+  "A",
+  "S",
+  "D",
+  "F",
+  "G",
+  "H",
+  "J",
+  "K",
+  "L",
+  "Z",
+  "X",
+  "C",
+  "V",
+  "B",
+  "N",
+  "M",
 ];
 
 var generatePasswordNumbers = [
@@ -117,6 +117,11 @@ function generatePassword() {
   if (passwordLength < 8 || passwordLength > 128) {
     alert("Please enter a value between 8 and 128.");
     return "Try again! Please enter a value between 8 and 128.";
+  }
+
+  if (!lowercase && !uppercase && !numbers && !special) {
+    alert("You must select atleast one character type.")
+    return "Try again! Please enter atleast one character type."
   }
 
   if (lowercase) {
