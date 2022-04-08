@@ -107,17 +107,18 @@ var generateBtn = document.querySelector("#generate");
 
 function generatePassword() { 
   var passwordLength = prompt("How many characters would you like your password to be?\nEnter a value between (8-128)");
+  
+  if (passwordLength < 8 || passwordLength > 128) {
+    alert("Please enter a value between 8 and 128.");
+    return "Try again! Please enter a value between 8 and 128.";
+  }
+  
   var lowercase = confirm("Would you like to include lowercase letters?");
   var uppercase = confirm("Would you like to include uppercase letters?");
   var numbers = confirm("Would you like to include numbers?");
   var special = confirm("Would you like to include special characters?");
   var userSelection = [];
   var password = "";
-
-  if (passwordLength < 8 || passwordLength > 128) {
-    alert("Please enter a value between 8 and 128.");
-    return "Try again! Please enter a value between 8 and 128.";
-  }
 
   if (!lowercase && !uppercase && !numbers && !special) {
     alert("You must select atleast one character type.")
