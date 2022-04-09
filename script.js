@@ -106,11 +106,16 @@ var generatePasswordSpecial = [
 var generateBtn = document.querySelector("#generate");
 
 function generatePassword() { 
-  var passwordLength = prompt("How many characters would you like your password to be?\nEnter a value between (8-128)");
-  
+  var passwordLength = prompt("How many characters would you like your password to be?\nEnter a number between (8-128)");
   if (passwordLength < 8 || passwordLength > 128) {
-    alert("Please enter a value between 8 and 128.");
-    return "Try again! Please enter a value between 8 and 128.";
+    alert("Please enter a number between 8 and 128.");
+    return "Try again! Please enter a number between 8 and 128.";
+  }
+
+  var parsed = parseInt(passwordLength);
+  if (isNaN(parsed)) {
+    alert("Please enter a number.");
+    return "Try again! Please enter a number between 8 and 128.";
   }
   
   var lowercase = confirm("Would you like to include lowercase letters?");
@@ -142,7 +147,7 @@ function generatePassword() {
   }
 
   for (var i = 0; i < passwordLength; i++) {
-    password = password + userSelection[Math.floor(Math.random() * userSelection.length)];
+    password += userSelection[Math.floor(Math.random() * userSelection.length)];
   }
 
   return password;
@@ -160,5 +165,3 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-
