@@ -113,7 +113,7 @@ function generatePassword() {
   }
 
   var parsed = parseInt(passwordLength);
-  if (isNaN(parsed)) {
+  if (Number.isNaN(parsed)) {
     alert("Please enter a number.");
     return "Try again! Please enter a number between 8 and 128.";
   }
