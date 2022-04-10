@@ -112,11 +112,11 @@ function generatePassword() {
     return "Try again! Please enter a number between 8 and 128.";
   }
 
-  var parsed = parseInt(passwordLength);
-  if (Number.isNaN(parsed)) {
-    alert("Please enter a number.");
-    return "Try again! Please enter a number between 8 and 128.";
+  if (isNaN(passwordLength)){
+    window.alert("Please enter a number between 8 and 128.");
+    return "Try again! Please enter a number between 8 and 128. ";
   }
+
   
   var lowercase = confirm("Would you like to include lowercase letters?");
   var uppercase = confirm("Would you like to include uppercase letters?");

@@ -13,7 +13,7 @@ Depending on the length of password that the user chose and the criterias select
 
 An image of the password generator:
 
-![Password Generator](./PasswordGeneratorPicture.png)
+![Password Generator](./Assets/images/PasswordGeneratorPicture.png)
 
 The password generator can be accessed here:
 
